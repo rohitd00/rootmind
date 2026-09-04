@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="RootMind is under development. API health monitoring with AI-powered root-cause diagnosis.">
+  <title>RootMind — Coming Soon</title>
+
+  <style>
+    :root {
+      --background: #09090b;
+      --foreground: #fafafa;
+      --muted: #a1a1aa;
+      --subtle: #71717a;
+      --border: #27272a;
+      --card: #0f0f11;
+      --danger: #ef4444;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      min-height: 100%;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--background);
+      color: var(--foreground);
+      font-family:
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        Monaco,
+        Consolas,
+        "Liberation Mono",
+        "Courier New",
+        monospace;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      width: min(100% - 40px, 720px);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 48px 0;
+    }
+
+    .card {
+      padding: 42px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 28px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--danger);
+      box-shadow: 0 0 10px rgba(239, 68, 68, 0.35);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(34px, 7vw, 54px);
+      line-height: 1;
+      letter-spacing: -0.06em;
+      font-weight: 600;
+    }
+
+    h1 span {
+      color: var(--muted);
+    }
+
+    .description {
+      max-width: 590px;
+      margin: 22px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .status {
+      margin-top: 32px;
+      padding: 18px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: #09090b;
+    }
+
+    .status-label {
+      margin-bottom: 12px;
+      color: var(--subtle);
+      font-size: 11px;
+    }
+
+    .status-line {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #d4d4d8;
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    .status-line::before {
+      content: "→";
+      color: var(--subtle);
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 7px;
+      height: 14px;
+      margin-left: 2px;
+      vertical-align: -2px;
+      background: var(--subtle);
+      animation: blink 1s steps(2, start) infinite;
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
+
+    footer {
+      margin-top: 18px;
+      text-align: center;
+      color: #52525b;
+      font-size: 10px;
+    }
+
+    footer a {
+      color: var(--subtle);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: color 150ms ease, border-color 150ms ease;
+    }
+
+    footer a:hover {
+      color: var(--foreground);
+      border-color: var(--border);
+    }
+
+    @media (max-width: 560px) {
+      .page {
+        width: min(100% - 28px, 720px);
+      }
+
+      .card {
+        padding: 28px 24px;
+      }
+
+      .description {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <section class="card" aria-labelledby="title">
+      <div class="eyebrow">
+        <span class="dot"></span>
+        <span>ROOTMIND / IN DEVELOPMENT</span>
+      </div>
+
+      <h1 id="title">know when it breaks.<br><span>understand why.</span></h1>
+
+      <p class="description">
+        RootMind is an API health monitoring system with AI-powered
+        root-cause diagnosis — built to go beyond knowing that something
+        failed and help understand what actually went wrong.
+      </p>
+
+      <div class="status" aria-label="Development status">
+        <div class="status-label">rootmind</div>
+        <div class="status-line">
+          building diagnosis engine<span class="cursor"></span>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <a href="mailto:rohitdasrd029@gmail.com">contact developer</a>
+    </footer>
+  </main>
+</body>
+</html>
